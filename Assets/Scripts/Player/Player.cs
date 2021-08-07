@@ -149,6 +149,47 @@ public class Player : MonoBehaviour, IFighter<HitData,HitResult>
                 RotatePlayerTowardsCloserTarget();
             } 
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+           
+            _movementSpeed = 0;
+
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            StopShoot();
+            _movementSpeed = 5;
+
+        }
+
+        if (_health <= 0)
+        {
+            _movementSpeed = 0;
+
+        }
+
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+
+        if (horizontal != 0 || vertical != 0 )
+        {
+            MovePlayer(horizontal, vertical);
+        }
+       else StopPlayerMovement();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetRifle();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetPistol();
+        }
+
     }
 
     public void SetPistol()
@@ -240,6 +281,7 @@ public class Player : MonoBehaviour, IFighter<HitData,HitResult>
             //Activo un sonido de no-balas.
             AS_GunSounds.PlayOneShot(S_WithoutAmmo);
         }
+        Debug.Log("player dispara");
     }
     public void StopShoot()
     {
@@ -256,7 +298,10 @@ public class Player : MonoBehaviour, IFighter<HitData,HitResult>
 
     public void AddBullets(WeaponType weapon, int bulletAmmounts)
     {
-        
+        var myWeapon = GetWeaponByType(weapon);
+   
+        Debug.Log("agarre balas");
+        myWeapon.sumamanual(bulletAmmounts);
     }
     public Weapon GetWeaponByType(WeaponType weaponType)
     {

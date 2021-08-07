@@ -14,6 +14,11 @@ GameObject:
   - component: {fileID: 2959818010778252758}
   - component: {fileID: 2959818010778252753}
   - component: {fileID: 2959818010778252762}
+  - component: {fileID: 6921055066564585332}
+  - component: {fileID: 6316174152409270277}
+  - component: {fileID: 7961031057282948045}
+  - component: {fileID: 4786041734553887229}
+  - component: {fileID: 230108937049002538}
   m_Layer: 27
   m_Name: Boss
   m_TagString: Untagged
@@ -62,7 +67,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -105,17 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473385ef52a46e042823cbc7cf9f273a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 150
-  _damage: 20
-  _range: 10
-  _angle: 20
+  _life: 1000
+  _maxLife: 40
+  _damage: 50
+  _range: 12
+  _angle: 360
   visibles:
     serializedVersion: 2
     m_Bits: 512
   CriticalhitCooldownTime: 1
   CanGetCriticalHit: 1
   AttackRange: 2.5
-  MaxLife: 0
   WaitTime: 3
   isAttacking: 0
   stunned: 0
@@ -123,6 +128,11 @@ MonoBehaviour:
   damageIncrease: 10
   HurtBox: {fileID: 2959818010990438487}
   MainCollider: {fileID: 2959818010778252756}
+  doorLeft: {fileID: 0}
+  doorRight: {fileID: 0}
+  doorLeft2: {fileID: 0}
+  doorRight2: {fileID: 0}
+  ActiveSpawner: {fileID: 0}
 --- !u!114 &2959818010778252762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +146,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBox: {fileID: 2959818012523414041}
+--- !u!114 &6921055066564585332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959818010778252752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f25c722d63cfb43bee32b9bfd0b4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6316174152409270277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959818010778252752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fbbac224248d545833fea76e2a426d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7961031057282948045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959818010778252752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bada2e44b6b830b4898e6a669afa632f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4786041734553887229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959818010778252752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22225a771e1fc7b45881b590aa5db8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &230108937049002538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959818010778252752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca2c7f2db9392b4a995ae8aa8fe7320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossIdleState: {fileID: 6921055066564585332}
+  BossChaseState: {fileID: 4786041734553887229}
+  meleeAttackState: {fileID: 7961031057282948045}
 --- !u!1 &2959818010990438481
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,8 +297,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.2337196}
+  m_Center: {x: 1.3962947e-10, y: 0, z: 0.11685988}
 --- !u!114 &2959818012523414040
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2060,6 +2060,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2072,6 +2073,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2163,7 +2165,7 @@ GameObject:
   - component: {fileID: 1463095097872477674}
   - component: {fileID: 1793557471686385578}
   m_Layer: 27
-  m_Name: EnemyBasic
+  m_Name: Enemigo1
   m_TagString: EnemyBasic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2255,9 +2257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 80
-  _damage: 15
+  _damage: 20
   _range: 10
-  _angle: 90
+  _angle: 313.65
   visibles:
     serializedVersion: 2
     m_Bits: 512
@@ -2337,6 +2339,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2348,6 +2351,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

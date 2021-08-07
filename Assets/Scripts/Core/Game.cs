@@ -1,18 +1,17 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[Serializable]
-public enum SceneIndex : uint
+
+public enum sceneIndex : uint
 {
     MainMenu = 0,
-    Credits,
+    Credits =5,
     Introduction,
-    Lvl1,
-    Lvl2,
-    Lvl3,
-    Victory,
-    Defeat
+    Lvl1= 1,
+    Lvl2 = 2,
+    Lvl3 = 3,
+    Victory = 4,
+    Defeat= 6
 }
 
 public static class Game
@@ -21,7 +20,7 @@ public static class Game
     {
         SceneManager.LoadScene(sceneIndex);
     }
-    public static void LoadScene(SceneIndex sceneIndex)
+    public static void LoadScene(sceneIndex sceneIndex)
     {
         SceneManager.LoadScene((int)sceneIndex);
     }

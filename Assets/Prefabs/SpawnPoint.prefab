@@ -50,5 +50,5 @@ MonoBehaviour:
   P_Enemy1: {fileID: 1463095098206568799, guid: 8c21b8b0c8157c14b842fa6a94fd5982,
     type: 3}
   P_Enemy2: {fileID: 909736674470549381, guid: 51644da350146f14f918fce7d7b4b3fa, type: 3}
-  enemiesToSpawn: 3
+  enemiesToSpawn: 1
   Frecuency: 10

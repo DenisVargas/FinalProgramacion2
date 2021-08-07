@@ -86,15 +86,15 @@ public class GameConsole : MonoBehaviour
 
         //5. Level1
         string command5Hash = (("DevLoadLevel1").ToLowerInvariant());
-        Commands.Add(command5Hash, () => Game.LoadScene(SceneIndex.Lvl1));
+        Commands.Add(command5Hash, () => Game.LoadScene(sceneIndex.Lvl1));
 
         //5. Level2
         string command6Hash = (("DevLoadLevel2").ToLowerInvariant());
-        Commands.Add(command6Hash, () => Game.LoadScene(SceneIndex.Lvl2));
+        Commands.Add(command6Hash, () => Game.LoadScene(sceneIndex.Lvl2));
 
         //7. Level3
         string command7Hash = (("IHaveNoTimeForThis").ToLowerInvariant());
-        Commands.Add(command7Hash, () => Game.LoadScene(SceneIndex.Lvl3));
+        Commands.Add(command7Hash, () => Game.LoadScene(sceneIndex.Lvl3));
 
         //8. CloseConsole
         string command8Hash = (("Close").ToLower());

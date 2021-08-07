@@ -1,7 +1,7 @@
-﻿using System;
+﻿using UnityEngine;
 
-[Serializable]
-public class ArchivementData
+[CreateAssetMenu(fileName = "ArchievementsUnlocked", menuName = "DataHolder", order = 0)]
+public class ArchivementData : ScriptableObject
 {
     public bool Nivel1Completado = false;
     public bool Nivel2Completado = false;

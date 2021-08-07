@@ -9,15 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100052, guid: b8ec98477f5cc90419a808c099d44643, type: 3}
       propertyPath: m_Name
-      value: transport Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 100048, guid: b8ec98477f5cc90419a808c099d44643, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: b8ec98477f5cc90419a808c099d44643, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 18
+      value: transport
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: b8ec98477f5cc90419a808c099d44643, type: 3}
       propertyPath: m_LocalPosition.x

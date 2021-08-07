@@ -44,10 +44,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform6x6
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f547c178346bdb7419dcf09f20212313, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f547c178346bdb7419dcf09f20212313, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.28578496
@@ -111,10 +107,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformEnd6x3
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 683416844349f6d419820134b5e90bb3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 683416844349f6d419820134b5e90bb3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.245785
@@ -177,10 +169,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 683416844349f6d419820134b5e90bb3, type: 3}
       propertyPath: m_Name
       value: PlatformEnd6x3 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 683416844349f6d419820134b5e90bb3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 683416844349f6d419820134b5e90bb3, type: 3}
       propertyPath: m_LocalPosition.x

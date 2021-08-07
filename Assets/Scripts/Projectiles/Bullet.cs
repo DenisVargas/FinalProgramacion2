@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public int Damage = 10;
 
     [SerializeField] float _travelSpeed = 10f;
-    [SerializeField] float _maxLifeTime = 5f;
+    [SerializeField] float _maxLifeTime = 2f;
 
     float _lifeTime;
 

@@ -14,14 +14,14 @@ public class TryAgainButton : MonoBehaviour
         var save = level.LoadGame();
 
         if (!save.playerSavedGame)
-            Game.LoadScene(SceneIndex.Lvl1); //Morimos en el primer nivel asi que no se guardo nada.
+            Game.LoadScene(sceneIndex.Lvl1); //Morimos en el primer nivel asi que no se guardo nada.
         else
         {
-            if (save.lastScenePlayed == SceneIndex.Lvl1)
-                Game.LoadScene(SceneIndex.Lvl2);
-            if (save.lastScenePlayed == SceneIndex.Lvl2 || 
-                save.lastScenePlayed == SceneIndex.Lvl3)
-                Game.LoadScene(SceneIndex.Lvl3);
+            if (save.lastScenePlayed == sceneIndex.Lvl1)
+                Game.LoadScene(sceneIndex.Lvl2);
+            if (save.lastScenePlayed == sceneIndex.Lvl2 || 
+                save.lastScenePlayed == sceneIndex.Lvl3)
+                Game.LoadScene(sceneIndex.Lvl3);
         }
     }
 }

@@ -1,2 +1,3 @@
 # FinalProgramacion2
-Top Down mobile shooter
+ 
+Version PC. Implementación de GOAP planner

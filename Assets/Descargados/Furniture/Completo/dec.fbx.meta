@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: c50ae2ebd7176094da3dd270cde11a55
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Chair001
+    100002: Chair001_d
+    100004: Chair002
+    100006: Chair002_d
+    100008: Chair003
+    100010: Chair003_d
+    100012: Container001
+    100014: Container001_d
+    100016: Container002
+    100018: Container002_d
+    100020: Container003
+    100022: Container003_d
+    100024: Container004
+    100026: Container004_d
+    100028: //RootNode
+    100030: Table001
+    100032: Table001_d
+    400000: Chair001
+    400002: Chair001_d
+    400004: Chair002
+    400006: Chair002_d
+    400008: Chair003
+    400010: Chair003_d
+    400012: Container001
+    400014: Container001_d
+    400016: Container002
+    400018: Container002_d
+    400020: Container003
+    400022: Container003_d
+    400024: Container004
+    400026: Container004_d
+    400028: //RootNode
+    400030: Table001
+    400032: Table001_d
+    2100000: Color3
+    2100002: Color2
+    2100004: Color1
+    2100006: Decals
+    2100008: Color4
+    2300000: Chair001
+    2300002: Chair001_d
+    2300004: Chair002
+    2300006: Chair002_d
+    2300008: Chair003
+    2300010: Chair003_d
+    2300012: Container001
+    2300014: Container001_d
+    2300016: Container002
+    2300018: Container002_d
+    2300020: Container003
+    2300022: Container003_d
+    2300024: Container004
+    2300026: Container004_d
+    2300028: Table001
+    2300030: Table001_d
+    3300000: Chair001
+    3300002: Chair001_d
+    3300004: Chair002
+    3300006: Chair002_d
+    3300008: Chair003
+    3300010: Chair003_d
+    3300012: Container001
+    3300014: Container001_d
+    3300016: Container002
+    3300018: Container002_d
+    3300020: Container003
+    3300022: Container003_d
+    3300024: Container004
+    3300026: Container004_d
+    3300028: Table001
+    3300030: Table001_d
+    4300000: Container001
+    4300002: Container001_d
+    4300004: Container002
+    4300006: Container002_d
+    4300008: Container003
+    4300010: Container003_d
+    4300012: Chair001
+    4300014: Chair001_d
+    4300016: Chair002
+    4300018: Chair002_d
+    4300020: Chair003
+    4300022: Chair003_d
+    4300024: Table001
+    4300026: Table001_d
+    4300028: Container004
+    4300030: Container004_d
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color1
+    second: {fileID: 2100000, guid: b48def831ebec4c42891ef53c157f9c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color2
+    second: {fileID: 2100000, guid: 53571bd4b4b12ca44ae91c983e89def2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color3
+    second: {fileID: 2100000, guid: 6428236e84651b44599b1d501336a7b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color4
+    second: {fileID: 2100000, guid: 36622b2ce1c87974cad23e9936d4583e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Decals
+    second: {fileID: 2100000, guid: 5ce1df9a20aedee4d8fbe040e700980b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

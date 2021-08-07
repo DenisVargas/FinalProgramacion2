@@ -3,8 +3,8 @@
 [RequireComponent(typeof(Collider))]
 public class Ammo : MonoBehaviour
 {
-    [SerializeField] WeaponType bulletType = WeaponType.Pistol;
-    [SerializeField] int Ammount = 15;
+    [SerializeField] WeaponType bulletType = WeaponType.AssaultRifle;
+    [SerializeField] int Ammount = 20;
     [SerializeField] float _lifeTime = 15f;
     [SerializeField] bool permanent = true;
 

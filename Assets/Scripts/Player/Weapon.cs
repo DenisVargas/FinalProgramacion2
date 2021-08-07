@@ -80,6 +80,8 @@ public class Weapon : MonoBehaviour
             if (_magazine <= 0)
                 OnStartReload();
         }
+
+        Debug.Log("weapon dispara");
     }
 
     public void OnStartReload()
@@ -90,7 +92,10 @@ public class Weapon : MonoBehaviour
         {
             isReloading = true;
             StartReloadAnimation();
+           
         }
+        
+        
     }
     public void OnEndReloading()
     {
@@ -117,7 +122,15 @@ public class Weapon : MonoBehaviour
         _magazine = bulletsInMagazine;
         _backPack = bulletsInMagazine;
         InfiniteBullets = infiniteBullets;
+        Debug.Log("loadbullets");
     }
+
+    public void sumamanual(int BulletsAmount)
+    {
+        _backPack += BulletsAmount; 
+    
+    }
+
     public void IncreaseDamage(int ammount)
     {
         if (ammount > 0)
@@ -138,4 +151,7 @@ public class Weapon : MonoBehaviour
         if (ammount > 0)
             _fireRate -= ammount;
     }
+
+    
+   
 }

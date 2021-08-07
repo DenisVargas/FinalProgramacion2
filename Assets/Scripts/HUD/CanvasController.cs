@@ -6,6 +6,10 @@ using UnityEngine.UI;
 using TMPro;
 
 public class CanvasController : MonoBehaviour {
+
+    static public CanvasController Instance { get; private set; }
+
+
     [SerializeField] GameObject MainMenuCanvas= null;
 
     [Header("Archivements")]
@@ -31,14 +35,26 @@ public class CanvasController : MonoBehaviour {
 
     public static bool IsInPause;
 
+	void Start ()
+    {
+        Instance = this;
+       
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ActivatePause();
+        }
+    }
     //PANTALLA DE MENU
     public void StartGame()
     {
-        Game.LoadScene(SceneIndex.Lvl1);
+        Game.LoadScene(sceneIndex.Lvl1);
     }
     public void Credits()
     {
-        Game.LoadScene(SceneIndex.Credits);
+        Game.LoadScene(sceneIndex.Credits);
     }
 
     public void Achievments()
@@ -46,6 +62,7 @@ public class CanvasController : MonoBehaviour {
         MainMenuCanvas.SetActive(false);
         AchievmentCanvas.SetActive(true);
 
+        GameProgressTracker.instance.LoadArchivementData();
         var archivements = GameProgressTracker.GetUnlockedArchivements();
 
         if (archivements.TotalEnemigosSimplesAsesinados > 0 ||archivements.TotalEnemigosRangoAsesinados > 0)
@@ -81,19 +98,20 @@ public class CanvasController : MonoBehaviour {
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
-        GameOptions.SetActive(true);
-        FixedJoystick.SetActive(true);
-        ShootButton.SetActive(true);
-        LeftButton.SetActive(true);
-        RightButton.SetActive(true);
+        //GameOptions.SetActive(true);
+        //FixedJoystick.SetActive(true);
+       // ShootButton.SetActive(true);
+       // LeftButton.SetActive(true);
+      //  RightButton.SetActive(true);
+        //InteractButton.SetActive(true);
     }
 
     public void GoToMenu()
     {
-        Game.LoadScene(SceneIndex.MainMenu);
+        Game.LoadScene(sceneIndex.MainMenu);
     }
 
-    public void ExitGame()
+    public void X()
     {
         Application.Quit();
     }
@@ -106,6 +124,7 @@ public class CanvasController : MonoBehaviour {
         ShootButton.SetActive(false);
         LeftButton.SetActive(false);
         RightButton.SetActive(false);
+        //InteractButton.SetActive(false);
     }
 
     public void ActivateConsole()
@@ -113,4 +132,6 @@ public class CanvasController : MonoBehaviour {
         ConsoleComand.SetActive(true);
         PauseMenu.SetActive(false);
     }
+
+
 }

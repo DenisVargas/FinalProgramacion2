@@ -14,4 +14,3 @@ public static class CommonUtils {
         return path;
     }
 }
-

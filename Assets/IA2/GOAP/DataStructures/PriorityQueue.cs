@@ -2,8 +2,12 @@
 using System.Linq;
 
 public class PriorityQueue<T> {
-
     private List<WeightedNode<T>> _queue = new List<WeightedNode<T>>();
+
+    /// <summary>
+    /// Returns true if the Queue does not contain any elements
+    /// </summary>
+    public bool IsEmpty => _queue.Count == 0;
 
     /// <summary>
     /// Adds an element to the Queue 
@@ -32,10 +36,4 @@ public class PriorityQueue<T> {
 
         return min;
     }
-
-    /// <summary>
-    /// Returns true if the Queue does not contain any elements
-    /// </summary>
-    public bool IsEmpty => _queue.Count == 0;
 }
-    

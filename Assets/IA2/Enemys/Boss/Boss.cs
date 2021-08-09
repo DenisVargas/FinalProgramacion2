@@ -96,37 +96,37 @@ public class Boss : Enemy
       
         var actions = new List<GOAPAction>{
                                               new GOAPAction("Idle")
-                                                 .Effect("isPlayerInSight", true)
-                                                 .LinkedState(idleState),
+                                                 .SetEffect("isPlayerInSight", true)
+                                                 .SetLinkedState(idleState),
 
                                               new GOAPAction("Chase")
-                                                 .Pre("isPlayerInSight", true)
-                                                 .Effect("isPlayerNear",    true)
-                                                 .Effect("isPlayerInRange",    true)
-                                                 .LinkedState(chaseState),
+                                                 .SetPre("isPlayerInSight", true)
+                                                 .SetEffect("isPlayerNear",    true)
+                                                 .SetEffect("isPlayerInRange",    true)
+                                                 .SetLinkedState(chaseState),
 
                                               new GOAPAction("Melee Attack")
-                                                 .Pre("isPlayerNear",   true)
-                                                 .Effect("isPlayerAlive", false)
-                                                 .LinkedState(meleeAttackState)
-                                                 .Cost(MeleeAttackCost() + 5),
+                                                 .SetPre("isPlayerNear",   true)
+                                                 .SetEffect("isPlayerAlive", false)
+                                                 .SetLinkedState(meleeAttackState)
+                                                 .SetCost(MeleeAttackCost() + 5),
 
                                               new GOAPAction("Ranged Attack")
-                                                 .Pre("isPlayerInRange", true)
-                                                 .Pre("hasRangeWeapon",  true)
-                                                 .Effect("isPlayerAlive", false)
-                                                 .LinkedState(rangedAttackState)
-                                                 .Cost(RangeAttackCost() + 1),
+                                                 .SetPre("isPlayerInRange", true)
+                                                 .SetPre("hasRangeWeapon",  true)
+                                                 .SetEffect("isPlayerAlive", false)
+                                                 .SetLinkedState(rangedAttackState)
+                                                 .SetCost(RangeAttackCost() + 1),
 
                                               new GOAPAction("Pick Ranged Weapon")
-                                                 .Pre("hasRangeWeapon", false)
-                                                 .Effect("hasRangeWeapon", true)
-                                                 .LinkedState(pickRangeWeaponState),
+                                                 .SetPre("hasRangeWeapon", false)
+                                                 .SetEffect("hasRangeWeapon", true)
+                                                 .SetLinkedState(pickRangeWeaponState),
 
                                               new GOAPAction("Celebrate")
-                                                 .Pre("isPlayerAlive", false)
-                                                 .Effect("Celebrate", true)
-                                                 .LinkedState(celebrateState),
+                                                 .SetPre("isPlayerAlive", false)
+                                                 .SetEffect("Celebrate", true)
+                                                 .SetLinkedState(celebrateState),
                                           };
 
         var from = new GOAPState();

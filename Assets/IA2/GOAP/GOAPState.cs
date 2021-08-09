@@ -11,7 +11,6 @@ public class GOAPState
     {
         generatingAction = gen;
     }
-
     public GOAPState(GOAPState source, GOAPAction gen = null)
     {
         foreach (var elem in source.values)
@@ -35,7 +34,6 @@ public class GOAPState
         //&& other.values.All(kv => values.Contains(kv));
         return result;
     }
-
     public override int GetHashCode()
     {
         //Better hashing but slow.
@@ -50,7 +48,6 @@ public class GOAPState
         //Heuristic count+first value hash multiplied by polynomial primes
         return values.Count == 0 ? 0 : 31 * values.Count + 31 * 31 * values.First().GetHashCode();
     }
-
     public override string ToString()
     {
         var str = "";

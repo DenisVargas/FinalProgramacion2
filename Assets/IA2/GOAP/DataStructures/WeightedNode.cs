@@ -3,7 +3,6 @@ using UnityEngine;
 
 [Serializable]
 public class WeightedNode<T> {
-
     [SerializeField] private T     _element;
     [SerializeField] private float _weight;
 
@@ -15,5 +14,4 @@ public class WeightedNode<T> {
         _element = element;
         _weight  = weight;
     }
-
 }

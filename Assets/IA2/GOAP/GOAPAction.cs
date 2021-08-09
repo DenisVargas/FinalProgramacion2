@@ -3,13 +3,11 @@ using FSM2;
 using UnityEngine;
 
 public class GOAPAction {
-
     public Dictionary<string, bool> preconditions { get; private set; }
     public Dictionary<string, bool> effects       { get; private set; }
     public string                   name          { get; private set; }
     public float                    cost          { get; private set; }
     public IState                   linkedState   { get; private set; }
-
 
     public GOAPAction(string name) {
         this.name     = name;
@@ -17,8 +15,12 @@ public class GOAPAction {
         preconditions = new Dictionary<string, bool>();
         effects       = new Dictionary<string, bool>();
     }
-
-    public GOAPAction Cost(float cost) {
+    /// <summary>
+    /// Sets the cost of the Action.
+    /// </summary>
+    /// <param name="cost">The cost of the action as a floating point.</param>
+    /// <returns>A reference to self</returns>
+    public GOAPAction SetCost(float cost = 1) {
         if (cost < 1f) {
             //Costs < 1f make the heuristic non-admissible. h() could overestimate and create sub-optimal results.
             //https://en.wikipedia.org/wiki/A*_search_algorithm#Properties
@@ -28,18 +30,32 @@ public class GOAPAction {
         this.cost = cost;
         return this;
     }
-
-    public GOAPAction Pre(string s, bool value) {
+    /// <summary>
+    /// Sets a Precondition for this action.
+    /// </summary>
+    /// <param name="s">The identifier/name of the precondition</param>
+    /// <param name="value">The value of the precondition</param>
+    /// <returns>A reference to self</returns>
+    public GOAPAction SetPre(string s, bool value) {
         preconditions[s] = value;
         return this;
     }
-
-    public GOAPAction Effect(string s, bool value) {
+    /// <summary>
+    /// Sets an Effect for this action.
+    /// </summary>
+    /// <param name="s">Name of the Effect</param>
+    /// <param name="value">Value of the Effect</param>
+    /// <returns>A reference to self</returns>
+    public GOAPAction SetEffect(string s, bool value) {
         effects[s] = value;
         return this;
     }
-
-    public GOAPAction LinkedState(IState state) {
+    /// <summary>
+    /// Sets a fsm state assosiated to this particular action.
+    /// </summary>
+    /// <param name="state">A reference to the linked state.</param>
+    /// <returns>A reference to self</returns>
+    public GOAPAction SetLinkedState(IState state) {
         linkedState = state;
         return this;
     }
